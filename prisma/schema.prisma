@@ -18,7 +18,9 @@ model User {
   image      String?
   bio        String?
   isVerified Boolean @default(false)
-  tweets     Tweet[]
+  tweets     Tweet[]  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
 
 model Tweet {
